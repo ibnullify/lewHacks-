@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<!--
+     Stolen from the
+    Template for FRONT-END
+     by Clyde "Thluffy" Sinclair
+  -->
+
+<html>
+<head>
+<title>Handy Hotspot NYC</title>
+<link rel="icon" href="logo1.gif">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+ <div class="container">
+  <div class="body_section" id="description">
+    <h1>Handy Hotspot NYC</h1>
+    Handy Hotspot NYC is a website created by Gilvir Gill and Henry Zheng. Written
+    in Python, it takes the location given by the user and compares distances between
+    it and a database of hotspots throughout NYC. Once it finds the closest one by
+    using Google Maps Geocode API to get coordinates and then using math to find the distance
+    between 2 given coordinate points, it will then give the user directions to the closest location.
+    <br>
+  </div>
+
+  <div class="body_section" id="usage_info">
+    <h2>Usage</h2>
+    Enter an address into the text field.
+    <br>
+    The computer will take your address, and it will find the closest Wi-Fi hotspot.
+    <br>
+    Select type of hotspot and type of location preferred.
+    <br>
+  </div>
+
+  <h3>Pro Tips:</h3>
+  <ol>
+    <li> Make sure to enter an address in the correct format.</li>
+    <li> Select at least one type of hotspot and one type of location</li>
+    <li> Keep in mind the database only tracks hotspots in New York City</li>
+    <li> Do not enter a semi-colon or other weird characters in your address</li>
+  </ol>
+  <div class="body_section" id="form">
+    <form name="input" method="GET" action="addressL.py">
+      <br>
+      Address (please enter a street address for more accurate results):<input type="text" name="address" value="345 Chambers Street, New York, NY 10282" required>
+      <br>
+      <br>
+      Mode of Transportation:
+      <br>
+      <select name="mode" size="1">
+        <option selected>walking</option>
+        <option>bicycling</option>
+        <option>transit</option>
+        <option>driving</option>
+      </select>
+      <br>
+      <br>
+      Types of Hotspots:<br>
+      <input type="checkbox" name="Free" value="includeH" checked="checked">Free
+      <input type="checkbox" name="Limited Free" value="includeH" checked="checked">Limited Free
+      <input type="checkbox" name="Partner Site" value="includeH" checked="checked">Partner Site
+      <br>
+      Different Types of Locations:<br>
+      <input type="checkbox" name="Indoor" value="includeL" checked="checked">Indoor
+      <input type="checkbox" name="Library" value="includeL" checked="checked">Library
+      <input type="checkbox" name="Outdoor" value="includeL" checked="checked">Outdoor
+      <input type="checkbox" name="Outdoor Kiosk" value="includeL" checked="checked">Outdoor Kiosk
+      <input type="checkbox" name="Outdoor TWC Aerial" value="includeL" checked="checked">Outdoor TWC Aerial
+      <input type="checkbox" name="Outdoor Subway" value="includeL" checked="checked">Subway Station
+      <br>
+      <br>
+      <center>
+        <input type="submit" value="Submit">
+      </center>
+    </form>
+  </div>
+  <footer>
+    &copy; Handy Hotspot NYC
+    <br>
+    <br>
+    Handy Hotspot NYC isn't endorsed by Google Inc. and doesn't reflect the views or opinions of Google Inc.
+    or anyone officially involved in producing or managing Google Maps. Google Maps and Google Inc. are trademarks
+    or registered trademarks of Alphabet, Inc.
+  </footer>
+ </div>
+</body>
+</html>
